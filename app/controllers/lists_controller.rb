@@ -12,10 +12,10 @@ class ListsController < ApplicationController
     # 4. 詳細画面へリダイレクト
     redirect_to list_path(list.id)
   end
-  
+
   def destroy
     list = List.find(params[:id]) #データ（レコード）を１件取得
-    list.destroy. #データを削除
+    list.destroy  #データを削除
     redirect_to '/lists' #投稿一覧画面へリダイレクト
   end
 
