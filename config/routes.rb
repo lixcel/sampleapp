@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'lists' => 'lists#index'
 
   # .../lists/1　や　.../lists/3 に該当する。
-  get 'lists:id' => 'lists#show'
+  get 'lists/:id' => 'lists#show' ,as: 'list'
 
   get 'lists/edit'
   get '/top' => "homes#top"
